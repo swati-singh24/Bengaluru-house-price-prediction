@@ -30,7 +30,8 @@ function onEstimatePriceClicked() {
     var estPrice = document.getElementById("uiEstimatedPrice");
 
     // Flask Backend Endpoint URL
-    var url = "http://127.0.0.1:5000/predict_home_price"; 
+    //var url = "http://127.0.0.1:5000/predict_home_price"; 
+    var url="https://bengaluru-house-price-prediction-1-wyvd.onrender.com/predict_home_price"
 
     $.post(url, {
         total_sqft: parseFloat(sqft.value),
@@ -47,7 +48,8 @@ function onEstimatePriceClicked() {
 // 4. Page Load hote hi Locations load karna
 function onPageLoad() {
     console.log("document loaded");
-    var url = "http://127.0.0.1:5000/get_location_names"; 
+    //var url = "http://127.0.0.1:5000/get_location_names"; 
+    var url= "https://bengaluru-house-price-prediction-1-wyvd.onrender.com/get_location_names"
     
     $.get(url, function(data, status) {
         console.log("got response for get_location_names request");
