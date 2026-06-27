@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+    /* 1. New Professional Background Image Blended with Dark Luxury Gradient */
+    background: linear-gradient(135deg, rgba(10, 15, 30, 0.93) 0%, rgba(20, 24, 45, 0.88) 100%), 
+                url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* 2. Professional Translucent Glass Box Effect */
+.form-container {
+    background: rgba(255, 255, 255, 0.04); /* Ultra-fine transparent white background */
+    backdrop-filter: blur(20px);            /* Heavy professional blur effect */
+    -webkit-backdrop-filter: blur(20px);
+    padding: 35px 40px;
+    border-radius: 20px;
+    
+    /* Subtle neon/white border glow for 3rd/4th year final project look */
+    border: 1px solid rgba(255, 255, 255, 0.09); 
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    
+    width: 420px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover over container to give interactive feedback */
+.form-container:hover {
+    transform: translateY(-4px);
+    border-color: rgba(99, 102, 241, 0.3); /* Subtle Indigo tint on hover */
+    box-shadow: 0 30px 60px -15px rgba(99, 102, 241, 0.15);
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+label {
+    font-weight: 600;
+    color: #94a3b8; /* Platinum slate text color */
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+/* Form Controls (Inputs & Dropdowns) */
+input[type="number"], select {
+    width: 100%;
+    padding: 11px 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+input[type="number"]:focus, select:focus {
+    border-color: #6366f1; /* Corporate Indigo Color Accent */
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Fix drop-down select option background */
+select option {
+    background: #111827;
+    color: #ffffff;
+}
+
+/* Segmented Buttons Control (BHK & Bath Buttons) */
+.switch-field {
+    display: flex;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 3px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.switch-field input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.switch-field label {
+    background-color: transparent;
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    padding: 8px 0;
+    border: none;
+    border-radius: 7px;
+    transition: all 0.2s ease;
+    flex-grow: 1;
+    margin: 0;
+}
+
+.switch-field label:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.switch-field input:checked + label {
+    background: rgba(255, 255, 255, 0.12); /* Clean corporate select look */
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Solid Indigo-to-Blue Corporate Submit Button */
+.submit {
+    background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 13px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 25px;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+    transition: all 0.2s ease;
+}
+
+.submit:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+}
+
+.submit:active {
+    transform: scale(0.99);
+}
+
+/* 3. Refined Dashboard Style Result Area */
+.result {
+    margin-top: 20px;
+    text-align: center;
+    padding: 12px;
+    background: rgba(16, 185, 129, 0.06); /* Premium Light Emerald tint */
+    border-radius: 10px;
+    border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.result h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #10b981; /* Dashboard Success Green */
+    background: none;
+    -webkit-text-fill-color: initial;
+}
