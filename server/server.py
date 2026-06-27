@@ -4,6 +4,8 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
+print("Starting Python Flask Server For Home Price Prediction...")
+util.load_saved_artifacts()  # Server start hote hi model aur columns load ho jayenge
 
 # 1. Location Names get karne ke liye endpoint
 @app.route('/get_location_names', methods=['GET'])
@@ -33,6 +35,5 @@ def predict_home_price():
     return response
 
 if __name__ == "__main__":
-    print("Starting Python Flask Server For Home Price Prediction...")
-    util.load_saved_artifacts()  # Server start hote hi model aur columns load ho jayenge
+    
     app.run(port=5000, debug=True)
